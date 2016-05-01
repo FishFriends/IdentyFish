@@ -1,0 +1,63 @@
+<!doctype html>
+
+{% block body %}
+
+<head>
+<title>IdentyFish</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+
+ {% if error %}<p class=error ><center><strong> <P style="COLOR: #FFFFFF; BACKGROUND-COLOR: #FA5858">Error: </strong> {{ error }}</P><center>{% endif %}
+
+<form action="{{ url_for('login') }}" method=post>
+<!-- Save for Web Slices (IdentyFish-Web.psd) -->
+<center>
+<table id="Table"  height="320" border="0" >
+<dl>
+	<tr>
+		<td aling="center">
+			<center><img src="static/images/logo.png" ></center>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<dd><input type=text  placeholder="Phone" name=phone > 
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<dd><input type=password placeholder="Password" name=password> 
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<dd><input type=text placeholder="Code Postal" name=code> 
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <center><dd><input type="submit" value="Sign In" ></center>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<a href="templates/logo.html" id="Having trouble?">Forgot your password?</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="templates/singup.html" id="Having trouble?">Create Account</a>
+		</td>
+	</tr>
+</dl>
+</table>
+<center>
+</form>
+{% endblock %}
+
